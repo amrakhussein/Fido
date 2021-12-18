@@ -1,0 +1,38 @@
+ul {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    height: 2.5rem;
+  }
+  
+  
+.link {
+    color: #61dafb;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+li {
+      list-style: none;
+  }
+  
+  /* .link:hover {
+    text-decoration: none;
+  } */
+  
+/*   
+  button {
+    border: solid, 0.0625rem, blanchedalmond;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: aquamarine;
+    padding: 0.3rem 0.65rem;
+  } */
+  
+  .active {
+    color:aliceblue;
+  }
+
+  nav {
+      margin-top: 10px;
+  }
