@@ -9,6 +9,7 @@ export default function Navigation() {
                 <li><NavLink className='link' to="/">Home</NavLink></li>
                 <li><NavLink className='link' to="/about">About</NavLink></li>
                 <li><NavLink className='link' to="info">Info</NavLink></li>
+                <li><NavLink className='link' to="gallery">dogs-gallery</NavLink></li>
             </ul>
         </nav>
     )
