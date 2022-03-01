@@ -22,12 +22,12 @@ export default function Navigation() {
         </li>
         <li>
           <NavLink className="link" to="gallery">
-            dogs-gallery
+            Dogs Gallery
           </NavLink>
         </li>
         <li>
           <NavLink className="link" to="breeds">
-            dogs-breeds
+            Choose Dog breed
           </NavLink>
         </li>
       </ul>

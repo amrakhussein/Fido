@@ -9,6 +9,7 @@ import Breeds from './dogCollections/Breeds';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
+ 
   return (
     <div className="App">
       <Router>
@@ -18,7 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/info" element={<Info />} />
           <Route path="/gallery" element={<Gallery />} />
-          {/* <Route path="/breeds" element={<Breeds />} /> */}
+          <Route path="/breeds" element={<Breeds />} />
         </Routes>
       </Router>
     </div>
