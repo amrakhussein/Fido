@@ -4,7 +4,7 @@ import DogCollectionBreedsGallery from './components/DogCollection/DogCollection
 
 function App() {
   return (
-    <div className='bg-gray-200 h-screen flex justify-center'>
+    <div className='bg-gray-200 h-screen'>
       {/* <NavLink className='' to='gallery'>
         Choose Dog breed
       </NavLink> */}
