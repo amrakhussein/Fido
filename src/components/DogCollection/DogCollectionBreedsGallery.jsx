@@ -1,3 +1,5 @@
+import DogCollectionBreedsCard from "./DogCollectionBreedsCard"
+
 export default function DogCollectionBreedsGallery({ imgSrcs }) {
   console.log('imgSrcs: ', imgSrcs)
 
@@ -14,14 +16,7 @@ export default function DogCollectionBreedsGallery({ imgSrcs }) {
             )))} */}
 
           {imgSrcs?.map((src, idx) => (
-            <div key={idx} className='w-96 h-72  '>
-              <img
-                className='object-fit w-full h-full rounded-xl border-2 border-cyan-200'
-                key={idx}
-                alt=''
-                src={src}
-              />
-            </div>
+            <DogCollectionBreedsCard key={idx} imgSrc={src} />
           ))}
         </section>
       </main>

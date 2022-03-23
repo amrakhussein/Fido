@@ -17,7 +17,7 @@ const Pagination = ({
       console.log('current:::', currentPage);
     
       // total number of pages
-      const pages = [...Array(numberOfPages + 1).keys()]
+      const pages = [...Array(numberOfPages+1).keys()].slice(1)
       console.log('pages', pages);
       console.log('num', numberOfPages);
         // }
