@@ -1,6 +1,16 @@
+import { useState } from "react";
 import DogCollectionBreedsCard from "./DogCollectionBreedsCard"
+import DogCollectionBreedsModal from "./DogCollectionBreedsModal";
 
 export default function DogCollectionBreedsGallery({ imgSrcs }) {
+  const [toggleModal, setToggleModal] = useState(false)
+  const [breedsSelectedImg, setBreedsSelectedImg] = useState('null')
+  console.log('toggleModal: ', toggleModal);
+const  handleClick = (e) => {
+  console.log(e.target.src)
+  setBreedsSelectedImg(e.target.src)
+}
+
   console.log('imgSrcs: ', imgSrcs)
 
   return (
@@ -16,8 +26,12 @@ export default function DogCollectionBreedsGallery({ imgSrcs }) {
             )))} */}
 
           {imgSrcs?.map((src, idx) => (
-            <DogCollectionBreedsCard key={idx} imgSrc={src} />
+            <DogCollectionBreedsCard handleImgClick={handleClick}  enlargeImg={toggleModal} setEnlargeImg={setToggleModal} key={idx} imgSrc={src} />
           ))}
+
+          
+      <DogCollectionBreedsModal setToggleModal={setToggleModal} toggleModal={toggleModal} breedsSelectedImg={breedsSelectedImg} />
+
         </section>
       </main>
     </>
