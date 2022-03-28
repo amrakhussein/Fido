@@ -9,7 +9,7 @@ export default function DogCollectionBreedsSelectLimit({
 
   const handleChange = (e) => {
     console.log('option change::::::::::::::::::::::::', e.target.innerText)
-    setPageSize(e.target.innerText)
+    setPageSize(Number(e.target.innerText))
   }
 
   const [dropdown, setDropdown] = useState(false)
