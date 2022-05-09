@@ -9,7 +9,7 @@ import DogCollectionBreedsGallery from './DogCollectionBreedsGallery'
 import DogCollectionBreedsSelectLimit from './DogCollectionBreedsSelectLimit'
 // import { useFetch } from '../../hooks/useFetch';
 
-export default function DogCollectionBreeds() {
+export default function DogCollectionBreedsManager() {
   const [selectBreed, setSelectBreed] = useState('')
   const [imgCount, setImgCount] = useState(undefined)
 

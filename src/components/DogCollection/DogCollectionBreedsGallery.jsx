@@ -1,22 +1,19 @@
-import { useState } from "react";
-import DogCollectionBreedsCard from "./DogCollectionBreedsCard"
-import DogCollectionBreedsModal from "./DogCollectionBreedsModal";
+import { useState } from 'react'
+import DogCollectionBreedsCard from './DogCollectionBreedsCard'
+import DogCollectionBreedsModal from './DogCollectionBreedsModal'
 
 export default function DogCollectionBreedsGallery({ imgSrcs }) {
   const [toggleModal, setToggleModal] = useState(false)
   const [breedsSelectedImg, setBreedsSelectedImg] = useState('null')
-  console.log('toggleModal: ', toggleModal);
-const  handleClick = (e) => {
-  console.log(e.target.src)
-  setBreedsSelectedImg(e.target.src)
-}
 
-  console.log('imgSrcs: ', imgSrcs)
+  const handleClick = (e) => {
+    setBreedsSelectedImg(e.target.src)
+  }
 
   return (
     <>
-      <main>
-        <section className='mt-20 gap-4 grid grid-cols-4 px-5 place-ditems-center justify-items-center '>
+      <main className=''>
+        <section className='px-5 mt-20 flex flex-wrap justify-center gap-4 xl:grid xl:grid-cols-3 mde:grid-cols-2 2xl:grid-cols-4   xl:justify-items-center '>
           {/* {imgSrcs && (imgSrcs?.map((src, idx) => (
             <>
           <div key={idx} className="w-96 h-72  ">
@@ -26,12 +23,20 @@ const  handleClick = (e) => {
             )))} */}
 
           {imgSrcs?.map((src, idx) => (
-            <DogCollectionBreedsCard handleImgClick={handleClick}  enlargeImg={toggleModal} setEnlargeImg={setToggleModal} key={idx} imgSrc={src} />
+            <DogCollectionBreedsCard
+              handleImgClick={handleClick}
+              enlargeImg={toggleModal}
+              setEnlargeImg={setToggleModal}
+              key={idx}
+              imgSrc={src}
+            />
           ))}
 
-          
-      <DogCollectionBreedsModal setToggleModal={setToggleModal} toggleModal={toggleModal} breedsSelectedImg={breedsSelectedImg} />
-
+          <DogCollectionBreedsModal
+            setToggleModal={setToggleModal}
+            toggleModal={toggleModal}
+            breedsSelectedImg={breedsSelectedImg}
+          />
         </section>
       </main>
     </>
