@@ -4,11 +4,11 @@ export default function DogCollectionBreedsSelectLimit({
   setPageSize,
   imgSrcs,
 }) {
-  console.log('imgSrcs: dddddd', imgSrcs)
+  
   const breedsRangeLimit = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
   const handleChange = (e) => {
-    console.log('option change::::::::::::::::::::::::', e.target.innerText)
+    
     setPageSize(Number(e.target.innerText))
   }
 

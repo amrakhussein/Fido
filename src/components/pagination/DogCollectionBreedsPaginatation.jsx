@@ -12,14 +12,14 @@ const Pagination = ({
 
       // const numberOfPages = collection / pageSize
       const numberOfPages = Math.ceil(totalImgs / ImgsPerPage);
-      console.log('numberOfPages: ', numberOfPages);
+      
       if (!numberOfPages || numberOfPages === 1) return null;
-      console.log('current:::', currentPage);
+      
     
       // total number of pages
       const pages = [...Array(numberOfPages+1).keys()].slice(1)
-      console.log('pages', pages);
-      console.log('num', numberOfPages);
+      
+      
         // }
     // }, [totalImgs])
     return (

@@ -4,7 +4,7 @@ export default function DogCollectionBreedsCard({imgSrc, enlargeImg,setEnlargeIm
     setEnlargeImg(!enlargeImg)
     handleImgClick(e)
   }
-  }  className='w-96 h-72 '>
+  }  className=' xl:w-96 xl:h-72 2xl:w-[23rem] '>
               <img
                 className=' cursor-pointer object-fit w-full h-full rounded-xl border-2 border-cyan-200'
                 alt='image of a dog breed'
