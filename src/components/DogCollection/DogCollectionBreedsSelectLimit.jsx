@@ -44,8 +44,9 @@ export default function DogCollectionBreedsSelectLimit({
               dropdown ? 'group-hover:block' : ''
             }`}
           >
-            {breedsRangeLimit.map((option) => (
+            {breedsRangeLimit.map((option, idx) => (
               <li
+                key={idx}
                 className='text-center block py-2 pl-2 pr-5 text-cyan-900 bg-blue-300 hover:bg-cyan-700 hover:text-white'
                 onClick={handleChange}
               >
