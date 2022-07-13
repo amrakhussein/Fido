@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { dogApiSlice } from './features/dogApi.slice'
+import { dogApiSlice } from '../features/dogApi.slice'
 
 export const store = configureStore({
   reducer: {
@@ -9,5 +9,3 @@ export const store = configureStore({
     return getDefaultMiddleware().concat(dogApiSlice.middleware)
   },
 })
-
-console.log('store: ', store.getState())

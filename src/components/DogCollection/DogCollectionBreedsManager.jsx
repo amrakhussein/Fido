@@ -3,7 +3,7 @@ import { usePagination } from '../../hooks/usePagination'
 import {
   useFetchDogBreedsQuery,
   useFetchDogBreedsSelectedQuery,
-} from '../../store/features/dogApi.slice'
+} from '../../features/dogApi.slice'
 import Pagination from '../pagination/DogCollectionBreedsPaginatation'
 import DogCollectionBreedsGallery from './DogCollectionBreedsGallery'
 import DogCollectionBreedsSelectLimit from './DogCollectionBreedsSelectLimit'
@@ -15,7 +15,6 @@ export default function DogCollectionBreedsManager() {
 
   const [skip, setSkip] = useState(true)
 
-  
   const {
     data: breeds,
     isLoading,
@@ -32,8 +31,8 @@ export default function DogCollectionBreedsManager() {
   } = useFetchDogBreedsSelectedQuery(selectBreed, {
     skip: skip,
   })
-  // 
-  // 
+  //
+  //
 
   const [currentPage, setCurrentPage] = useState(1)
   const [pageSize, setPageSize] = useState(9)
@@ -47,11 +46,9 @@ export default function DogCollectionBreedsManager() {
 
   useEffect(() => {
     if (!selectedLoading) {
-      
-
       setImgCount(breedsSelected?.message?.length)
-      
-      // 
+
+      //
 
       const gallery = usePagination(
         breedsSelected?.message || [],
@@ -59,15 +56,11 @@ export default function DogCollectionBreedsManager() {
         pageSize
       )
       setCollection(gallery)
-      
-      
     }
   }, [breedsSelected?.message, currentPage, pageSize])
 
-  
-
   // let imgSrcs = breedsSelected.map((src) => src.url)
-  // 
+  //
 
   if (breedsIsFetching || selectedIsFetching)
     return <h3 className='pl-2'>loading...</h3>

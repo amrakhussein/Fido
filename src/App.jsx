@@ -1,13 +1,9 @@
-import DogCollectionBreeds from './components/DogCollection/DogCollectionBreeds'
-import DogCollectionBreedsGallery from './components/DogCollection/DogCollectionBreedsGallery'
+import DogCollectionBreedsManager from "./components/DogCollection/DogCollectionBreedsManager";
 
-function App() {
+export default function App() {
   return (
-    <div className=' h-screen'>
-      <DogCollectionBreeds />
-      <DogCollectionBreedsGallery />
+    <div className='h-screen'>
+      <DogCollectionBreedsManager />
     </div>
   )
 }
-
-export default App

@@ -14,13 +14,6 @@ export default function DogCollectionBreedsGallery({ imgSrcs }) {
     <>
       <main className=''>
         <section className='px-5 mt-20 flex flex-wrap justify-center gap-4 xl:grid xl:grid-cols-3 mde:grid-cols-2 2xl:grid-cols-4   xl:justify-items-center '>
-          {/* {imgSrcs && (imgSrcs?.map((src, idx) => (
-            <>
-          <div key={idx} className="w-96 h-72  ">
-            <img className="object-fit w-full h-full rounded-xl border-2 border-cyan-200" key={idx} alt='' src={src} />
-            </div>
-            </>
-            )))} */}
 
           {imgSrcs?.map((src, idx) => (
             <DogCollectionBreedsCard
